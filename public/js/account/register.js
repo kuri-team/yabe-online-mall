@@ -1,4 +1,3 @@
-<!-- Created By CodingNepal -->
 const slidePage = document.querySelector(".slide-page");
 const nextBtnFirst = document.querySelector(".firstNext");
 const prevBtnSec = document.querySelector(".prev-1");
@@ -9,9 +8,9 @@ const prevBtnFourth = document.querySelector(".prev-3");
 const submitBtn = document.querySelector(".submit");
 const progressText = document.querySelectorAll(".step p");
 const progressCheck = document.querySelectorAll(".step .check");
-const bullet = document.querySelectorAll(".step .bullet");
+const bullet = document.querySelectorAll(".step .point");
 let current = 1;
-
+<!-- Created By CodingNepal -->
 nextBtnFirst.addEventListener("click", function(event){
     event.preventDefault();
     slidePage.style.marginLeft = "-25%";
