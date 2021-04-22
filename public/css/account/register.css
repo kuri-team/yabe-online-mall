@@ -1,42 +1,31 @@
-*{
+main {
     margin: 0;
     padding: 0;
     outline: none;
 }
 
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    overflow: hidden;
-    background: #f7f7f7;
-}
-::selection{
-    color: #fff;
-    background: #EB5E28;
-}
-.container{
+.container {
+    margin: 100px auto;
     width: 330px;
     background: #fff;
     text-align: center;
     border-radius: 24px;
     padding: 50px 35px 10px 35px;
 }
-.container header{
+.container h1 {
     font-size: 35px;
     font-weight: 600;
     margin: 0 0 30px 0;
 }
-.container .form-outer{
+.container .form-outer {
     width: 100%;
     overflow: hidden;
 }
-.container .form-outer form{
+.container .form-outer form {
     display: flex;
     width: 400%;
 }
-.form-outer form .page{
+.form-outer form .page {
     width: 25%;
     transition: margin-left 0.5s ease-in-out;
 }
@@ -58,6 +47,18 @@ form .page .field .label{
     font-weight: 500;
 }
 
+.firstNext, .register-reset-bttn, .next, .prev, .submit {
+    margin: 20px;
+}
+
+.register-reset-bttn, .submit {
+    background: #000000 !important;
+}
+
+.register-reset-bttn:hover, .submit:hover {
+    background: #555555 !important;
+}
+
 #shopper, #store_owner {
     width: 5%;
 }
@@ -66,8 +67,7 @@ form .page .field .label{
 }
 
 #shopper {
-    margin: 10%;
-    margin-top: -2%;
+    margin: -2% 10% 10%;
 }
 #shopper-text {
     margin-left: -10%;
@@ -80,11 +80,14 @@ form .page .field input {
     padding-left: 15px;
 }
 
-form .page .field select{
+form .page .field select {
+    margin-right: 1px;
     width: 100%;
     padding-left: 10px;
     font-weight: 500;
+    border-radius: 24px;
 }
+
 form .page .field button{
     width: 100%;
     height: calc(100% + 5px);
@@ -100,17 +103,13 @@ form .page .field button{
     transition: 0.5s ease;
 }
 form .page .field button:hover{
-    background: #000;
+    background: #cd4813;
 }
-form .page .btns button{
-    margin-top: -20px!important;
-}
-form .page .btns button.prev{
-    margin-right: 3px;
-}
+
 form .page .btns button.next{
     margin-left: 3px;
 }
+
 .container .progress-bar{
     display: flex;
     margin: 40px 0;
@@ -152,7 +151,7 @@ form .page .btns button.next{
 }
 .progress-bar .step .point:before,
 .progress-bar .step .point:after{
-    /*the progress line transition*/
+    /* the progress line transition */
     position: absolute;
     content: '';
     bottom: 11px;
@@ -167,11 +166,13 @@ form .page .btns button.next{
     transform-origin: left;
     animation: animate 0.3s linear forwards;
 }
+
 @keyframes animate {
     100%{
         transform: scaleX(1);
     }
 }
+
 .progress-bar .step:last-child .point:before,
 .progress-bar .step:last-child .point:after{
     display: none;
