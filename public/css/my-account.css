@@ -1,0 +1,224 @@
+
+.u-btn {
+    /*display: inline-block; position of edit button*/
+    display: table;
+    /*TODO maye need another solution for negative marin*/
+    cursor: pointer;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    border: 0 none transparent;
+    outline-width: 0;
+    background-color: transparent;
+    margin: 0;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 0;
+    align-self: flex-start;
+}
+/*spacing btw lines*/
+.u-text.text-spacing li {
+    margin-bottom: 18px;
+}
+/*thu image zoom out*/
+.u-image,
+.u-background-effect-image {
+    object-fit: cover;
+    display: block;
+    vertical-align: middle;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+/*rounding thu image*/
+.u-image-circle.u-image {
+    border-radius: 50% !important;
+}
+/*position of the gray background container*/
+.gray-container {
+    position: relative;
+    width: 1140px;
+    margin: 0 auto;
+}
+html {
+    font-size: 16px;
+}
+.u-align-center {
+    text-align: center;
+}
+/*text alignment */
+.u-tabs:not([class*="u-align-"]),
+.u-accordion:not([class*="u-align-"]),
+.u-repeater-item:not([class*="u-align-"]),
+.u-container-style:not([class*="u-align-"]) {
+    text-align: left;
+}
+/*the tabs my profile*/
+.u-tabs .u-tab-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 0 0 -5px;
+}
+.u-tabs .u-tab-link {
+    display: block;
+    padding: 10px 20px;
+    color: inherit;
+    border-color: transparent;
+}
+.u-tabs .u-tab-pane {
+    position: relative;
+}
+/*hide text for other tabs*/
+.u-tabs .u-tab-content > .u-tab-pane {
+    flex: 1;
+    display: none;
+}
+/*main container*/
+.u-tabs .u-tab-content > .u-tab-active {
+    display: flex;
+}
+.u-tabs.u-tab-links-align-left .u-tab-list {
+    justify-content: flex-start;
+}
+.u-tabs.u-tab-links-align-center .u-tab-list {
+    justify-content: center;
+}
+.u-tabs.u-tab-links-align-right .u-tab-list {
+    justify-content: flex-end;
+}
+.u-tabs.u-tab-links-align-justify .u-tab-list {
+    text-align: center;
+}
+.u-tabs.u-tab-links-align-justify .u-tab-list > * {
+    flex: 1;
+}
+.u-tab-list[class*="u-border"] .u-tab-link.u-border-1 {
+    margin-bottom: -1px;
+}
+.u-tab-list[class*="u-border"] .u-tab-link.u-border-2 {
+    margin-bottom: -2px;
+}
+.u-tab-list[class*="u-border"] .u-tab-link.u-border-3 {
+    margin-bottom: -3px;
+}
+.u-tab-list[class*="u-border"] .u-tab-link.u-border-4 {
+    margin-bottom: -4px;
+}
+
+/*gray main background*/
+.u-custom-color-6,
+.u-body.u-custom-color-6,
+.u-container-style.u-custom-color-6:before,
+.u-table-alt-custom-color-6 tr:nth-child(even)
+{
+    color: #111111;
+    background-color: #ececec;
+}
+/*highlighting the tabs bar*/
+.u-hover-custom-color-7:hover,
+.u-hover-custom-color-7[class*="u-border-"]:hover,
+.u-hover-custom-color-7:focus,
+.u-hover-custom-color-7[class*="u-border-"]:focus,
+.u-active-custom-color-7.u-active.u-active,
+.u-active-custom-color-7[class*="u-border-"].u-active.u-active,
+a.u-button-style.u-hover-custom-color-7:hover,
+a.u-button-style.u-hover-custom-color-7[class*="u-border-"]:hover,
+a.u-button-style.u-hover-custom-color-7:focus,
+a.u-button-style.u-hover-custom-color-7[class*="u-border-"]:focus,
+a.u-button-style.u-button-style.u-active-custom-color-7:active,
+a.u-button-style.u-button-style.u-active-custom-color-7[class*="u-border-"]:active,
+a.u-button-style.u-button-style.u-active-custom-color-7.active,
+a.u-button-style.u-button-style.u-active-custom-color-7[class*="u-border-"].active,
+li.active > a.u-button-style.u-button-style.u-active-custom-color-7,
+li.active > a.u-button-style.u-button-style.u-active-custom-color-7[class*="u-border-"]
+{
+    color: #ffffff !important;
+    background-color: #eb5e28 !important;
+}
+/*nude edit button*/
+.u-button-style.u-border-custom-color-2
+{
+    border-color: #ccc5b9 !important;
+    color: #ccc5b9 !important;
+    background-color: transparent !important;
+}
+/*bold the title*/
+.container .u-text-1 {
+    font-size: 3.75rem;
+    background-image: none;
+    font-weight: bold;
+    margin: 52px 0 0;
+}
+/*margin to the footer*/
+.container .u-tabs-1 {
+    min-height: 547px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.container .u-container-layout-1 {
+    padding: 30px;
+}
+/*position of container*/
+.container .u-text-2 {
+    line-height: 25.6px;
+    margin: 22px 147px 0 507px;
+}
+
+.container .u-image-1 {
+    width: 269px;
+    height: 269px;
+    background-image: url("../media/image/thu.jpg");
+    background-position: 50% 50%;
+    margin: -269px auto 0 40px;
+}
+/*edit button position*/
+.container .u-btn-1 {
+    border-style: solid;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    margin: 40px auto 0 550px;
+    border: solid;
+}
+
+@media only screen and (max-width: 768px) {
+    #my-account-text {
+        width: 320px
+    }
+    #tab-list {
+        width: 0;
+        margin-left: 10%;
+    }
+
+    #profile-picture {
+        margin: 0 500px;
+    }
+
+    #tab-1 {
+        width: 10px;
+        margin-left: -450px;
+    }
+    #main-container {
+        overflow: hidden;
+    }
+    /*Hoverable Dropdown*/
+
+
+
+}
