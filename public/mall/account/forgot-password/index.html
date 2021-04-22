@@ -69,8 +69,19 @@
 </header>
 
 <main>
-  <form class="login-container" action="" method="post">  <!-- TODO: Add .content-body from common.css -->
+  <section class=" u-section-1" id="forgot-pw-section">
     <h1>FORGOT PASSWORD</h1>
+    <p>Enter the email address or phone number associated with your account. We'll send you a code and link to reset your password.</p>
+    <div>
+      <form id="forgot-pw-input" method="get" action="" target="_blank" name="userInfo">
+        <label><input type="text" placeholder="Email / Phone number" name="q" id="email-phone-input" required></label>
+        <label><input id="forgot-pw-submit" type="submit" value="Submit"></label>
+      </form>
+    </div>
+  </section>
+
+  <form class="login-container" action="" method="post">  <!-- TODO: Add .content-body from common.css -->
+    <h1>RESET PASSWORD</h1>
     <input type="text" name="" placeholder="Validation code"  autocomplete="username" required>
     <input type="password" name="" placeholder="Password" autocomplete="new-password" required>
     <input type="password" name="" placeholder="Password" autocomplete="verify-password" required>
@@ -78,10 +89,10 @@
     <span><i class="fas fa-eye"></i> </span>
     <input type="submit" name="" value="LOGIN">
 
-    <nav class="level">
+    <section class="level">
       <div id="forgot-pw">
         <div>
-          <a href="../forgot-password">Sign in?</a>
+          <a href="../register">Sign in?</a>
         </div>
       </div>
       <div id="create-account">
@@ -89,7 +100,7 @@
           <a href="../my-account">Create an account</a>
         </div>
       </div>
-    </nav>
+    </section>
 
   </form>
 
