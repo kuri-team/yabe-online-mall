@@ -1,18 +1,19 @@
-// Instant feedback validation constant
-const FNAME_REQUIREMENT = document.getElementById("fname-greater-3");
-const LNAME_REQUIREMENT = document.getElementById("lname-greater-3");
-const EMAIL_REQUIREMENT = document.getElementById("email-pattern");
-const PHONE_REQUIREMENT = document.getElementById("phone-pattern")
 const FIRST_NAME = document.getElementById("fname");
 const LAST_NAME = document.getElementById("lname");
 const EMAIL = document.getElementById("email_add");
 const PHONE = document.getElementById("phone_num");
+const MESSAGE = document.getElementById("message");
+
+// Instant feedback validation constant
+const FNAME_REQUIREMENT = document.getElementById("fname-greater-3");
+const LNAME_REQUIREMENT = document.getElementById("lname-greater-3");
+const EMAIL_REQUIREMENT = document.getElementById("email-pattern");
+const PHONE_REQUIREMENT = document.getElementById("phone-pattern");
 
 // Form validation
 const FORM = document.getElementById("contact-form");
 
 FORM.addEventListener("submit", function(event) {
-
     // Get form values
     const FORM = document.getElementById("contact-form")
     const FIRST_NAME_CONSOLE_ALERT = FORM.fname.value;
@@ -33,34 +34,46 @@ FORM.addEventListener("submit", function(event) {
 
     // Logic
     if (FIRST_NAME_CONSOLE_ALERT === "" || FIRST_NAME_CONSOLE_ALERT.length < 3) {
+        FIRST_NAME.style.borderColor = "red";
         // Checks the value: If Value empty  or value length less than 3 or value is digit than Show error Invalid Name
         errNum++;
         err += errNum + ". Invalid first name. Valid first name contains at least 3 letters.\n";
+    } else {
+        FIRST_NAME.style.borderColor = "green";
     }
 
     if (LAST_NAME_CONSOLE_ALERT === "" || LAST_NAME_CONSOLE_ALERT.length < 3) {
+        LAST_NAME.style.borderColor = "red";
         errNum++;
         err += errNum + ". Invalid last name. Valid last name contains at least 3 letters.\n";
+    } else {
+        LAST_NAME.style.borderColor = "green";
     }
 
     if (PHONE_CONSOLE_ALERT === "" || !REGEX_PHONE_CONSOLE_ALERT.test(PHONE_CONSOLE_ALERT)) {
+        PHONE.style.borderColor = "red";
         // Check the phone number : If phone number is empty or value length less than 12 or is not a null then show error Invalid Phone number
         errNum++;
         err += errNum + ". Invalid phone number. Valid phone number contains 9 to 11 digits\n";
+    } else {
+        PHONE.style.borderColor = "green";
     }
 
     if (EMAIL_CONSOLE_ALERT === "") {
+        EMAIL.style.borderColor = "red";
         // If you don't Enter anything in Email field than show error(Enter Email)
         errNum++;
         err += errNum + ". Enter Email.\n";
-    } else {
         // If you don't Enter Email address in email pattern format (i already described "REGEX_EMAIL_CONSOLE_ALERT") then see error (Invalid Email)
-        if(!REGEX_EMAIL_CONSOLE_ALERT.test(EMAIL_CONSOLE_ALERT)) {
-            errNum++;
-            err += errNum + ". Invalid Email. Valid email has the form [name]@[domain]\n";
-        }
+    } else if (!REGEX_EMAIL_CONSOLE_ALERT.test(EMAIL_CONSOLE_ALERT)) {
+        EMAIL.style.borderColor = "red";
+        errNum++;
+        err += errNum + ". Invalid Email. Valid email has the form [name]@[domain]\n";
+    } else {
+        EMAIL.style.borderColor = "green";
     }
 
+    // Loop to check if at least one of the checkboxes is checked
     let atLeastOneCheckboxChecked = false;
     for (let i = 0; i < CHECKBOXES_CONSOLE_ALERT.length; i++) {
         if (CHECKBOXES_CONSOLE_ALERT[i].checked) {
@@ -70,14 +83,18 @@ FORM.addEventListener("submit", function(event) {
     }
 
     if (!atLeastOneCheckboxChecked) {
+        document.getElementById('sun').style.borderColor = "red";
         errNum++;
         err += errNum + ". At least one checkbox must be checked.\n";
     }
 
     if (MESSAGE_CONSOLE_ALERT === "" || MESSAGE_CONSOLE_ALERT.length < 50 || MESSAGE_CONSOLE_ALERT.length > 500) {
+        MESSAGE.style.borderColor = "red";
         // If the user didn't enter anything in Message field than show error
         errNum++;
         err += errNum + ". Valid message contains 50 to 500 letters.\n";
+    } else {
+        MESSAGE.style.borderColor = "green";
     }
 
     if (!FORM.contact_method[0].checked && !FORM.contact_method[1].checked) {
