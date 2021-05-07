@@ -34,7 +34,7 @@ FORM.addEventListener("submit", function(event) {
 
     // Logic
     if (FIRST_NAME_CONSOLE_ALERT === "" || FIRST_NAME_CONSOLE_ALERT.length < 3) {
-        FIRST_NAME.style.borderColor = "red";
+        FIRST_NAME.style.backgroundColor = "#FFCCCC";
         // Checks the value: If Value empty  or value length less than 3 or value is digit than Show error Invalid Name
         errNum++;
         err += errNum + ". Invalid first name. Valid first name contains at least 3 letters.\n";
@@ -43,7 +43,7 @@ FORM.addEventListener("submit", function(event) {
     }
 
     if (LAST_NAME_CONSOLE_ALERT === "" || LAST_NAME_CONSOLE_ALERT.length < 3) {
-        LAST_NAME.style.borderColor = "red";
+        LAST_NAME.style.backgroundColor = "#FFCCCC";
         errNum++;
         err += errNum + ". Invalid last name. Valid last name contains at least 3 letters.\n";
     } else {
@@ -51,7 +51,7 @@ FORM.addEventListener("submit", function(event) {
     }
 
     if (PHONE_CONSOLE_ALERT === "" || !REGEX_PHONE_CONSOLE_ALERT.test(PHONE_CONSOLE_ALERT)) {
-        PHONE.style.borderColor = "red";
+        PHONE.style.backgroundColor = "#FFCCCC";
         // Check the phone number : If phone number is empty or value length less than 12 or is not a null then show error Invalid Phone number
         errNum++;
         err += errNum + ". Invalid phone number. Valid phone number contains 9 to 11 digits\n";
@@ -60,13 +60,13 @@ FORM.addEventListener("submit", function(event) {
     }
 
     if (EMAIL_CONSOLE_ALERT === "") {
-        EMAIL.style.borderColor = "red";
+        EMAIL.style.backgroundColor = "#FFCCCC";
         // If you don't Enter anything in Email field than show error(Enter Email)
         errNum++;
         err += errNum + ". Enter Email.\n";
         // If you don't Enter Email address in email pattern format (i already described "REGEX_EMAIL_CONSOLE_ALERT") then see error (Invalid Email)
     } else if (!REGEX_EMAIL_CONSOLE_ALERT.test(EMAIL_CONSOLE_ALERT)) {
-        EMAIL.style.borderColor = "red";
+        EMAIL.style.backgroundColor = "#FFCCCC";
         errNum++;
         err += errNum + ". Invalid Email. Valid email has the form [name]@[domain]\n";
     } else {
@@ -83,13 +83,12 @@ FORM.addEventListener("submit", function(event) {
     }
 
     if (!atLeastOneCheckboxChecked) {
-        document.getElementById('sun').style.borderColor = "red";
         errNum++;
         err += errNum + ". At least one checkbox must be checked.\n";
     }
 
     if (MESSAGE_CONSOLE_ALERT === "" || MESSAGE_CONSOLE_ALERT.length < 50 || MESSAGE_CONSOLE_ALERT.length > 500) {
-        MESSAGE.style.borderColor = "red";
+        MESSAGE.style.backgroundColor = "#FFCCCC";
         // If the user didn't enter anything in Message field than show error
         errNum++;
         err += errNum + ". Valid message contains 50 to 500 letters.\n";

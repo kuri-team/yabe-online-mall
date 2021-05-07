@@ -199,14 +199,6 @@ main h1 {
     transition: 0.5s;
 }
 /*Validation */
-.label:hover {
-    border-color: #aba18c;
-}
-
-.register-form .invalid .label {
-    border-color: #cd4813;
-}
-
 .message-error {
     color: #cd4813;
     font-size: 12px;
