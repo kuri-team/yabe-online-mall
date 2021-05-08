@@ -43,15 +43,6 @@
     }
 
     .bio-content {
-        text-align: -moz-left;
-        text-align: -webkit-left;
-        text-align: left;
         text-indent: 30px;
-    }
-
-    .bio-content-leaders {
-        text-align: -moz-center;
-        text-align: -webkit-center;
-        text-align: center;
     }
 }
